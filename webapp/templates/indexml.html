@@ -62,83 +62,102 @@
     </div>
     <br>
 
-    <hr style="color:lightgray; border-width: 3px;">
+    <hr style="color:lightgray; border-width: 2px;">
     <div class="container-fluid">
-        <div class="img" style="float: right;">
-            <img src="../static/images/corr.png" id="corr">
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="card border-primary mb-3" style="max-width: 20rem;">
-            <div class="card-header">Filters</div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="col-form-label" for="condition">Conditions</label>
-                            <select id="condition">
-                                <option value="0">Clear</option>
-                                <option value="1">Cloudy</option>
-                                <option value="2">Fog/Haze</option>
-                                <option value="3">Rain</option>
-                                <option value="4">Thunderstorm</option>
-                                <option value="5">Wintery Mix</option>                                                                                          
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-form-label" for="road_type">Road Type</label>
-                            <select id="road_type">
-                                <option value="1">Street</option>
-                                <option value="2">Highway</option>                                
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-form-label" for="side">Road Side</label>
-                            <select id="side">
-                                <option value="0">Right</option>
-                                <option value="1">Left</option>                                                               
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-form-label" for="temp">Temperature(F)</label>
-                            <input type="text" class="form-control" value="70" id="temp">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="pressure">Visibility(mi)</label>
-                            <input type="text" class="form-control" value="10" id="visibility">
+        <div class="row" style="margin-top:2%">
+            <div class="col-md-3" style="border: 5px solid rgb(223, 4, 4);">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Machine Learning Model</h1>
+                            <hr>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="col-form-label" for="windSpeed">Wind Speed(mph)</label>
-                            <input type="text" class="form-control" value="2" id="windSpeed">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-form-label" for="humid">Humidity(%)</label>
-                            <input type="text" class="form-control" value="10" id="humid">
-                        </div>
-                        <div class="form-group">
-                            <label class="col-form-label" for="pressure">Pressure(in)</label>
-                            <input type="text" class="form-control" value="30" id="pressure">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-form-label" for="pressure">Length of Accident(mi)</label>
-                            <input type="text" class="form-control" value=".01" id="distance">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
                     <div class="col-md-12">
-                        <button type="button" class="btn btn-primary" id="filter">Make Prediction!</button>
+                        <div class="card border-primary mb-3" style="max-width: 20rem;">
+                            <div class="card-header">Filters</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label" for="condition">Conditions</label>
+                                            <select id="condition">
+                                        <option value="0">Clear</option>
+                                        <option value="1">Cloudy</option>
+                                        <option value="2">Fog/Haze</option>
+                                        <option value="3">Rain</option>
+                                        <option value="4">Thunderstorm</option>
+                                        <option value="5">Wintery Mix</option>                                                                                          
+                                    </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-form-label" for="road_type">Road Type</label>
+                                            <select id="road_type">
+                                        <option value="1">Street</option>
+                                        <option value="2">Highway</option>                                
+                                    </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-form-label" for="side">Road Side</label>
+                                            <select id="side">
+                                        <option value="0">Right</option>
+                                        <option value="1">Left</option>                                                               
+                                    </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-form-label" for="temp">Temperature(F)</label>
+                                            <input type="text" class="form-control" value="70" id="temp">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-form-label" for="pressure">Visibility(mi)</label>
+                                            <input type="text" class="form-control" value="10" id="visibility">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="col-form-label" for="windSpeed">Wind Speed(mph)</label>
+                                            <input type="text" class="form-control" value="2" id="windSpeed">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-form-label" for="humid">Humidity(%)</label>
+                                            <input type="text" class="form-control" value="10" id="humid">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-form-label" for="pressure">Pressure(in)</label>
+                                            <input type="text" class="form-control" value="30" id="pressure">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-form-label" for="pressure">Length of Accident(mi)</label>
+                                            <input type="text" class="form-control" value=".01" id="distance">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-primary" id="filter">Make Prediction!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="centeredImage">
+                    <img src="../static/images/emphasis.png" id="emphasis">
+                </div>
+            </div>
+            <div class="img" style="float: right;">
+                <img src="../static/images/corr.png" id="corr">
+            </div>
+
         </div>
+    </div>
 
     </div>
 
