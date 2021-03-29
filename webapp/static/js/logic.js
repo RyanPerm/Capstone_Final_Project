@@ -73,6 +73,7 @@ function makePlot(returnedData) {
         title: "Probability of Severity",
         xaxis: {
             title: "Severity Score",
+            dtick: 1
 
         },
         yaxis: {
