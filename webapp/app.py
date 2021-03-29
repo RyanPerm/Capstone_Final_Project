@@ -17,11 +17,38 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                           'favicon.ico',mimetype='image/vnd.microsoft.icon')
 
-# Route to render indexml.html template
+# Route to render index.html template
 @app.route("/")
 def home():
-    # Return template and data
-    return render_template("indexml.html")
+        # Return template and data
+        return render_template("index.html")
+
+@app.route("/ml")
+def mlmodel():
+        # Return template and data
+        return render_template("indexml.html")
+
+@app.route("/tab1")
+def tableau1():
+        # Return template and data
+        return render_template("indextab1.html")
+
+@app.route("/tab2")
+def tableau2():
+        # Return template and data
+        return render_template("indextab2.html")
+
+@app.route("/table")
+def table():
+        # Return template and data
+        return render_template("table.html")
+
+@app.route("/about")
+def about_us():
+        # Return template and data
+       return render_template("indexaboutus.html")
+
+
 
 @app.route("/makePredictions", methods=["POST"]) # 
 def makePredictions():
